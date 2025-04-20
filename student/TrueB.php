@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * IPP Project 2 - SOL25 interpreter
+ *
+ * @file TrueB.php
+ * @author xsevcim00
+ * @date 2025-04-20
+ */
+
 namespace IPP\Student;
 
 /**
@@ -24,12 +32,18 @@ final class TrueB extends Base
      */
     public function builtin(string $sel, array $args): mixed
     {
+        // dispatch truthy methods for True
         return match ($sel) {
-            'not'               => FalseB::get(),
-            'and:'              => MessageDispatcher::send($args[0], 'value', []),
-            'or:'               => TrueB::get(),
-            'ifTrue:ifFalse:'   => MessageDispatcher::send($args[0], 'value', []),
-            default             => parent::builtin($sel, $args),
+            // not flips true to false
+            'not' => FalseB::get(),
+            // and: only evaluates block if still true
+            'and:' => MessageDispatcher::send($args[0], 'value', []),
+            // or: always true, skip evaluating second block
+            'or:' => TrueB::get(),
+            // ifTrue:ifFalse: run true‑branch block
+            'ifTrue:ifFalse:' => MessageDispatcher::send($args[0], 'value', []),
+            // fall back to common base methods
+            default => parent::builtin($sel, $args),
         };
     }
 }
