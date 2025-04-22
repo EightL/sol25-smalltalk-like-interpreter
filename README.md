@@ -128,7 +128,7 @@ The `Block` class handles control structures like `whileTrue:` by continuously e
 
 | Message Dispatcher |Block Execution |
 |:------------------:|:---------------:|
-| ![MessageDispatcher Flow](./ippdiagrams/MessageDispatcherFlow3.svg) | ![Block Flow](./ippdiagrams/BlockFlowDiagram.svg) |
+| ![MessageDispatcher Flow](./ippdiagrams/MessageDispatcherFlow2.svg) | ![Block Flow](./ippdiagrams/BlockFlowDiagram.svg) |
 
 
 ### SuperProxy
