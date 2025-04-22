@@ -131,7 +131,7 @@ class InterpreterException extends IPPException
      */
     public static function xml(string $m = "XML error", ?Throwable $p = null): self
     {
-        // thrown when source DOM is not well-formed
+        // thrown when source DOM is not well formed
         return new self($m, 41, $p);
     }
 }

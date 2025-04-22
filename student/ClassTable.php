@@ -104,7 +104,7 @@ class ClassTable
             $this->classes[$name] = new ClassDef($name, $par);
         }
 
-        // we resolve parents & link ClassDef objects
+        // we resolve parents and link ClassDef objects
         foreach ($this->classes as $cls) {
             $p = $cls->getParentName();
             if (!isset($this->classes[$p])) {
