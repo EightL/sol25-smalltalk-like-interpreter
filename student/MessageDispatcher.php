@@ -173,7 +173,7 @@ class MessageDispatcher
             'self'  => $self,
             'super' => new SuperProxy(
                 $self,
-                ClassTable::getInstance()->getClass($self->class)->getParent()
+                $def->getOwner()->getParent()
             )
         ];
 
