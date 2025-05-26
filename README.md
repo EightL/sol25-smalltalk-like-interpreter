@@ -2,6 +2,8 @@ Implementační dokumentace k 2. úloze do IPP 2024/2025
 Jméno a příjmení: **Martin Ševčík**  
 Login: **xsevcim00**
 
+**Evaluation:** "Celkem bez rozšíření: 93 %" --> **15/13**
+
 ## Introduction
 
 This document details my implementation of the SOL25 interpreter for IPP Project 2.
